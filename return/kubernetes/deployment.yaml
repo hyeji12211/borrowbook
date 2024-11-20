@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: return
-          image: "username/return:latest"
+          image: "hyeji1221/return:1120"
           ports:
             - containerPort: 8080
           readinessProbe:

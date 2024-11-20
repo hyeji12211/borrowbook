@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: borrow
-          image: "hyeji1221/borrow:latest"
+          image: "hyeji1221/borrow:1120"
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -35,3 +35,7 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 5
+
+          envFrom:
+          - configMapRef:
+              name: config-dev

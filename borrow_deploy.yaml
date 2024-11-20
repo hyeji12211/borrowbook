@@ -1,24 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mypage
+  name: borrow
   labels:
-    app: mypage
+    app: borrow
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mypage
+      app: borrow
   template:
     metadata:
       labels:
-        app: mypage
+        app: borrow
     spec:
       containers:
-        - name: mypage
-          image: "hyeji1221/mypage:1120" 
+        - name: borrow
+          image: hyeji1221/borrow:1120
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: "200m"            
           readinessProbe:
             httpGet:
               path: '/actuator/health'
@@ -35,3 +38,5 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 5
+
+            
