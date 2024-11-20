@@ -13,4 +13,5 @@ public class BookReturned extends AbstractEvent {
     private Long userId;
     private Long bookId;
     private Date returnDate;
+    private Integer qty;
 }

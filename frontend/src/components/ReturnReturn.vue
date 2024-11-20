@@ -19,6 +19,7 @@
             <Number label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
             <Number label="BookId" v-model="value.bookId" :editMode="editMode" :inputUI="''"/>
             <Date label="ReturnDate" v-model="value.returnDate" :editMode="editMode" :inputUI="''"/>
+            <Number label="Qty" v-model="value.qty" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

@@ -107,6 +107,7 @@
                 'userId': 0,
                 'bookId': 0,
                 'returnDate': '2024-11-20',
+                'qty': 0,
             }
         },
         methods:{
