@@ -47,6 +47,15 @@ public class Borrow {
 
     //<<< Clean Arch / Port Method
     public static void cancelBook(OutOfStock outOfStock) {
+        repository().findById(outOfStock.getId()).ifPresent(borrow -> {
+            // Perform some operations on the 'borrow' entity
+            borrow.setBorrowStatus("canceled");  // Example: update status to 'canceled'
+            repository().save(borrow);
+        
+            // Publish event that the book has been canceled
+            BookCanceled bookCanceled = new BookCanceled(borrow);
+            bookCanceled.publishAfterCommit();
+        });
         //implement business logic here:
 
         /** Example 1:  new item 

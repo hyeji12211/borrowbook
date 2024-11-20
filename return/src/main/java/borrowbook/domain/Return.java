@@ -25,6 +25,8 @@ public class Return {
 
     private Date returnDate;
 
+    private Integer qty;
+
     @PostPersist
     public void onPostPersist() {
         BookReturned bookReturned = new BookReturned(this);

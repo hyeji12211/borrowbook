@@ -70,6 +70,7 @@
                     { text: "userId", value: "userId" },
                     { text: "bookId", value: "bookId" },
                     { text: "returnDate", value: "returnDate" },
+                    { text: "qty", value: "qty" },
                 ],
             return : [],
             newValue: {},
@@ -90,6 +91,7 @@
                 'userId': 0,
                 'bookId': 0,
                 'returnDate': '2024-11-20',
+                'qty': 0,
             }
         },
         methods: {
