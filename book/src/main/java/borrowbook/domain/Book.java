@@ -47,6 +47,22 @@ public class Book {
 
     //<<< Clean Arch / Port Method
     public static void decreaseBook(BookBorrowed bookBorrowed) {
+        repository().findById(bookBorrowed.getId()).ifPresent(book -> {
+        if(book.getBookCnt() >= bookBorrowed.getQty()) {
+            //BookDecreased bookDecreased = new BookDecreased(book);
+            //bookDecreased.publishAfterCommit();
+            book.setBookCnt(book.getBookCnt() - bookBorrowed.getQty());
+            repository().save(book);
+        }
+
+        else {
+
+            OutOfStock outOfStock = new OutOfStock(book);
+            outOfStock.publishAfterCommit();
+            System.out.println("Out of Stock 발생!");
+
+        } 
+        });
         //implement business logic here:
 
         /** Example 1:  new item 
