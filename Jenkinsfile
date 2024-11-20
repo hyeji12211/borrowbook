@@ -82,7 +82,7 @@ pipeline {
                             git commit -m "Update deploy.yaml with build ${env.BUILD_NUMBER}"
                             git push origin ${GITHUB_BRANCH}
                             cd ..
-                            rm -rf repo
+                            rm -rf repo  
                         """
                     }
                 }
