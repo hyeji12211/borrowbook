@@ -116,7 +116,7 @@
 
 ### 4) 셀프 힐링/무정지배포 - Rediness Probe 
 
-- borrow 서비스의 deployment.yaml 파일에 readinessProbe 를 설정하고 배포를 진행
+- borrow 서비스의 deployment.yaml 파일에 redinessProbe 를 설정하고 배포를 진행
 
 <div style="display: flex; align-items: center; justify-content: center;">
   <img src="https://github.com/user-attachments/assets/996b26b4-e34f-45c8-b042-9c3672bc7d7c" alt="image1" style="zoom: 70%; margin-right: 10px;" />
@@ -138,3 +138,11 @@
 - EXTERNAL-IP로 Grafana 접속
 
 <img src="https://github.com/user-attachments/assets/dacbbad4-cb6b-4147-a4b7-e3b40081bfcf" alt="image" style="zoom:80%;" />
+
+- Prometheus 접속
+
+![image-20241121161307557](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20241121161307557.png)
+
+- borrow에 siege로 부하발생 후 Prometheus 그래프 확인
+
+![image](https://github.com/user-attachments/assets/27f5b683-dbfb-48d1-ade9-0b51cb42e4c2)
