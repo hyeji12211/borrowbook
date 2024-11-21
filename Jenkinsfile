@@ -12,7 +12,7 @@ pipeline {
         GIT_USER_NAME = 'hyeji12211'
         GIT_USER_EMAIL = 'lhg261515@gmail.com'
         GITHUB_CREDENTIALS_ID = 'Github-Cred'
-        GITHUB_REPO = 'github.com/hyeji12211/borrowbook.git'
+        GITHUB_REPO = 'github.com/hyeji12211/borrowbook/borrow'
         GITHUB_BRANCH = 'main' // 업로드할 브랜치
     }
  
