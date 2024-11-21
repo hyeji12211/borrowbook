@@ -49,9 +49,10 @@
 - 외부에서 마이크로서비스들을 접근하기 위해서는 단일 진입점 gateway가 필요로 합니다.
 
 <div style="display: flex; align-items: center; justify-content: center;">
-  <img src="https://github.com/user-attachments/assets/df3da5cc-586f-4883-84a5-ba1861844819" alt="image1" style="zoom:67%; margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/8b8ec638-0fc8-4e5d-a607-6f651d48cb47" alt="image2" style="zoom:67%;" />
+  <img src="https://github.com/user-attachments/assets/df3da5cc-586f-4883-84a5-ba1861844819" alt="image1" style="zoom:47%; margin-right: 10px;" />
+  <img src="https://github.com/user-attachments/assets/8b8ec638-0fc8-4e5d-a607-6f651d48cb47" alt="image2" style="zoom:47%;" />
 </div>
+
 
 
 
@@ -68,7 +69,7 @@
 
 # 컨테이너 인프라 설계 및 구성 역량
 
-### 클라우드 배포 - Jenckins
+### 클라우드 배포 - Jenkins
 
 ![image](https://github.com/user-attachments/assets/560f4aa6-0111-48e7-91c0-ec39436c38eb)
 
