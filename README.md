@@ -73,6 +73,8 @@
 
 ![image](https://github.com/user-attachments/assets/1de9aaf0-439b-4671-95a1-9d7ce808be39)
 
+![image](https://github.com/user-attachments/assets/79155f40-5645-4ba8-b2da-37375c0105a6)
+
 - 기존의 service와 deployment borrow 삭제 후 다시 생성 확인
 
 <img src="https://github.com/user-attachments/assets/3d5e2af1-ee5c-4591-8b81-e8658a4ee7bf" alt="image" style="zoom:80%;" />
