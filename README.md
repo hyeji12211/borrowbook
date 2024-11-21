@@ -142,7 +142,7 @@
 
 - Prometheus 접속
 
-![image-20241121161307557](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20241121161307557.png)
+![image](https://github.com/user-attachments/assets/e58b7067-077b-4416-9a3b-3aaecee088b6)
 
 - borrow에 siege로 부하발생 후 Prometheus 그래프 확인
 
