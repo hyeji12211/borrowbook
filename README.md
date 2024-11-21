@@ -71,7 +71,7 @@
 
 ### 클라우드 배포 - Jenkins
 
-![image](https://github.com/user-attachments/assets/560f4aa6-0111-48e7-91c0-ec39436c38eb)
+![image](https://github.com/user-attachments/assets/1de9aaf0-439b-4671-95a1-9d7ce808be39)
 
 - 기존의 service와 deployment borrow 삭제 후 다시 생성 확인
 
