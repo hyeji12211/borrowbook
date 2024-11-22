@@ -84,6 +84,10 @@
 
 ![image](https://github.com/user-attachments/assets/e6051a7e-83d0-4028-a0f1-9485c9ecdbe5)
 
+- Docker Hub에 이미지 배포
+
+![image](https://github.com/user-attachments/assets/46f28645-9b95-4088-9664-8150b1c6823d)
+
 ### 2) 컨테이너 자동확장 - HPA
 
 - Auto Scaler 설정: od의 평균 CPU 사용량이 전체 요청된 CPU의 **50%**를 초과하면 새로운 Pod를 추가
