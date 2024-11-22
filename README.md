@@ -34,7 +34,7 @@
 
 ### 1) Saga(분산트랜잭션) & Compensation(보상처리)
 
-- 책 4권 빌리기
+- 책 5권 빌리기
 
 ![image](https://github.com/user-attachments/assets/eee605ad-b446-45ef-aefa-aee5fcc89b15)
 
@@ -68,7 +68,7 @@
 
 # 컨테이너 인프라 설계 및 구성 역량
 
-### 클라우드 배포 - Jenkins
+### 1) 클라우드 배포 - Jenkins
 
 ![image](https://github.com/user-attachments/assets/1de9aaf0-439b-4671-95a1-9d7ce808be39)
 
@@ -78,9 +78,9 @@
 
 <img src="https://github.com/user-attachments/assets/3d5e2af1-ee5c-4591-8b81-e8658a4ee7bf" alt="image" style="zoom: 67%;" />
 
-### 1) 컨테이너 자동확장 - HPA
+### 2) 컨테이너 자동확장 - HPA
 
-- Auto Scaler 설정
+- Auto Scaler 설정: od의 평균 CPU 사용량이 전체 요청된 CPU의 **50%**를 초과하면 새로운 Pod를 추가
 
 ![image](https://github.com/user-attachments/assets/ce4bb86d-85dd-499d-b745-876d710dd62b)
 
@@ -90,15 +90,15 @@
 
 
 
-### 2) 컨테이너로부터 환경분리 - CofigMap
+### 3) 컨테이너로부터 환경분리 - CofigMap
 
-- 주문서비스의 Logging 레벨을 Configmap의 ORDER_DEBUG_INFO 참조하도록 설정 확인
+- 대여 서비스의 Logging 레벨을 Configmap의 ORDER_DEBUG_INFO 참조하도록 설정 확인
 
 ![image](https://github.com/user-attachments/assets/51209fe5-c506-475d-aaf6-9e519bcaf0d5)
 
 <img src="https://github.com/user-attachments/assets/04d3bb7f-be90-4756-8a24-3c5273727e9a" alt="image" style="zoom:80%;" />
 
-### 3) 클라우드스토리지 활용 - PVC
+### 4) 클라우드스토리지 활용 - PVC
 
 - pvc 생성
 
@@ -116,14 +116,14 @@
 
 <img src="https://github.com/user-attachments/assets/5c495239-066c-40e3-b661-48912d6b412e" alt="image" style="zoom:80%;" />
 
-### 4) 무정지배포 - Rediness Probe 
+### 5) 무정지배포 - Rediness Probe 
 
 - borrow 서비스의 deployment.yaml 파일에 redinessProbe 를 설정하고 배포를 진행
 
 <img src="https://github.com/user-attachments/assets/996b26b4-e34f-45c8-b042-9c3672bc7d7c" alt="image1" width="40%" style="margin-right: 10px;"> <img src="https://github.com/user-attachments/assets/936e12c2-435a-45ba-b1b5-ea64c2c9c600" alt="image2" width="50%">
 
 
-### 5) 서비스 메쉬 응용 - Mesh 
+### 6) 서비스 메쉬 응용 - Mesh 
 
 - istio-system 설치 확인
 
@@ -133,7 +133,7 @@
 
 <img src="https://github.com/user-attachments/assets/db1c65a2-4348-44cb-9449-9ee8272cda04" alt="image" style="zoom: 67%;" />
 
-### 6) 통합 모니터링 - Loggregation/Monitoring
+### 7) 통합 모니터링 - Loggregation/Monitoring
 
 - loki pod 생성
 
