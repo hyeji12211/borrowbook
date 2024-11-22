@@ -149,4 +149,4 @@
 
 - borrow에 siege로 부하발생 후 Grafana 그래프 확인
 
-![image](https://github.com/user-attachments/assets/02e06e7b-08cc-4e83-bcbd-662681a5a382)
+![image](https://github.com/user-attachments/assets/af1a6a4c-f0e3-47f1-86a1-abf18184f624)
