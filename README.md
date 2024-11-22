@@ -125,7 +125,10 @@
 
 ### 5) 서비스 메쉬 응용 - Mesh 
 
-- <img src="https://github.com/user-attachments/assets/3fbbbe2a-c0f9-45b3-bc48-a89289537d8e" alt="image" style="zoom: 67%;" />
+- istio-system 설치 확인
+
+<img src="https://github.com/user-attachments/assets/3fbbbe2a-c0f9-45b3-bc48-a89289537d8e" alt="image" style="zoom: 67%;" />
+
 - istio-injection=enabled 라벨 설정 후 배포
 
 <img src="https://github.com/user-attachments/assets/db1c65a2-4348-44cb-9449-9ee8272cda04" alt="image" style="zoom: 67%;" />
