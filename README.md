@@ -78,6 +78,12 @@
 
 <img src="https://github.com/user-attachments/assets/3d5e2af1-ee5c-4591-8b81-e8658a4ee7bf" alt="image" style="zoom: 67%;" />
 
+- Azure portal에서 ACR, AKS에서 이미지가 배포됨을 확인
+
+![image](https://github.com/user-attachments/assets/152c2f4c-3090-4e40-8ba2-c1b9cd8e7dea)
+
+![image](https://github.com/user-attachments/assets/e6051a7e-83d0-4028-a0f1-9485c9ecdbe5)
+
 ### 2) 컨테이너 자동확장 - HPA
 
 - Auto Scaler 설정: od의 평균 CPU 사용량이 전체 요청된 CPU의 **50%**를 초과하면 새로운 Pod를 추가
