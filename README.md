@@ -101,6 +101,10 @@
 
 ### 3) 컨테이너로부터 환경분리 - CofigMap
 
+- YAML 기반의 ConfigMap을 생성 후 객체 확인
+
+![image](https://github.com/user-attachments/assets/c8a5ad67-3462-4657-a137-8d0942e7e47b)
+
 - 대여 서비스의 Logging 레벨을 Configmap의 ORDER_DEBUG_INFO 참조하도록 설정 확인
 
 ![image](https://github.com/user-attachments/assets/51209fe5-c506-475d-aaf6-9e519bcaf0d5)
