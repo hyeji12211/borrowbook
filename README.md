@@ -6,23 +6,25 @@
 
 # 클라우드 네이티브 모델링
 
-### 기능적 요구사항
+### 서비스 시나리오
 
-1. 사용자가 도서를 검색합니다.
-2. 사용자가 도서를 대여합니다.
-3. 사용자가 도서를 반납합니다.
-4. 관리자가 도서 정보를 등록하고, 재고 상태를 관리합니다.
-5. 사용자가 빌리고자하는 도서의 재고가 없는 경우에는 빌릴 수 없습니다.
-6. 연체가 된 경우 책을 빌릴 수 없습니다.
+**기능적 요구사항**
 
-### 비기능적 요구사항
+1. 사용자가 도서를 검색한다.
+2. 사용자가 도서를 대여한다.
+3. 사용자가 도서를 반납한다.
+4. 관리자가 도서 정보를 등록하고, 재고 상태를 관리한다.
+5. 사용자가 빌리고자하는 도서의 재고가 없는 경우에는 빌릴 수 없다.
+6. 연체가 된 경우 책을 빌릴 수 없다.
+
+**비기능적 요구사항**
 
 1. 트랜잭션
    1. 도서의 수량이 부족한 경우에는 대여가 되지 않아야 한다.
 2. 장애격리
    1. 대여 시스템에 과부하가 발생하면 사용자를 잠시동안 받지 않고 잠시후에 진행하도록 한다.
 3. 성능
-   1. 사용자가 
+   1. 사용자가 자신의 대여 상태를 확인할 수 있어야 한다.
 
 ### 도메인분석 - 이벤트스토밍
 
@@ -30,7 +32,7 @@
 
 # 클라우드 네이티브 개발 MSA
 
-### 1) Saga & Compensation 
+### 1) Saga(분산트랜잭션) & Compensation(보상처리)
 
 - 책 4권 빌리기
 
@@ -48,11 +50,7 @@
 
 - 외부에서 마이크로서비스들을 접근하기 위해서는 단일 진입점 gateway가 필요로 합니다.
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="https://github.com/user-attachments/assets/df3da5cc-586f-4883-84a5-ba1861844819" alt="image1" style="zoom:47%; margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/8b8ec638-0fc8-4e5d-a607-6f651d48cb47" alt="image2" style="zoom:47%;" />
-</div>
-
+<img src="https://github.com/user-attachments/assets/df3da5cc-586f-4883-84a5-ba1861844819" alt="image1" width="40%" style="margin-right: 10px;"> <img src="https://github.com/user-attachments/assets/8b8ec638-0fc8-4e5d-a607-6f651d48cb47" alt="image2" width="40%">
 
 
 
@@ -60,11 +58,12 @@
 ### 3) 분산 데이터 프로젝션 - CQRS
 
 - CQRS를 통해 데이터 쓰기, 읽기를 분리하여 관리
+- BookBorrowed 이벤트가 발생하면 데이터가 자동으로 업데이트됨 -> 항상 최신 상태 유지
+  - Mypage의 값을 BookBorrowed에서 가져옴 (사용자 아이디, 빌린 책의 수, 빌린 상태)
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="https://github.com/user-attachments/assets/939b5655-f4f5-45a9-b7df-1591175e2fbe" alt="image1" style="zoom: 80%; margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/5e06c5ac-3910-45eb-9271-d779ba1cb513" alt="image2" style="zoom: 80%;" />
-</div>
+
+<img src="https://github.com/user-attachments/assets/939b5655-f4f5-45a9-b7df-1591175e2fbe" alt="image1" width="40%" style="margin-right: 10px;"> <img src="https://github.com/user-attachments/assets/5e06c5ac-3910-45eb-9271-d779ba1cb513" alt="image2" width="40%">
+
 
 
 # 컨테이너 인프라 설계 및 구성 역량
@@ -77,7 +76,7 @@
 
 - 기존의 service와 deployment borrow 삭제 후 다시 생성 확인
 
-<img src="https://github.com/user-attachments/assets/3d5e2af1-ee5c-4591-8b81-e8658a4ee7bf" alt="image" style="zoom:80%;" />
+<img src="https://github.com/user-attachments/assets/3d5e2af1-ee5c-4591-8b81-e8658a4ee7bf" alt="image" style="zoom: 67%;" />
 
 ### 1) 컨테이너 자동확장 - HPA
 
@@ -117,14 +116,12 @@
 
 <img src="https://github.com/user-attachments/assets/5c495239-066c-40e3-b661-48912d6b412e" alt="image" style="zoom:80%;" />
 
-### 4) 셀프 힐링/무정지배포 - Rediness Probe 
+### 4) 무정지배포 - Rediness Probe 
 
 - borrow 서비스의 deployment.yaml 파일에 redinessProbe 를 설정하고 배포를 진행
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="https://github.com/user-attachments/assets/996b26b4-e34f-45c8-b042-9c3672bc7d7c" alt="image1" style="zoom: 70%; margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/936e12c2-435a-45ba-b1b5-ea64c2c9c600" alt="image2" style="zoom: 60%;" />
-</div>
+<img src="https://github.com/user-attachments/assets/996b26b4-e34f-45c8-b042-9c3672bc7d7c" alt="image1" width="40%" style="margin-right: 10px;"> <img src="https://github.com/user-attachments/assets/936e12c2-435a-45ba-b1b5-ea64c2c9c600" alt="image2" width="50%">
+
 
 ### 5) 서비스 메쉬 응용 - Mesh 
 
@@ -149,3 +146,7 @@
 - borrow에 siege로 부하발생 후 Prometheus 그래프 확인
 
 ![image](https://github.com/user-attachments/assets/27f5b683-dbfb-48d1-ade9-0b51cb42e4c2)
+
+- borrow에 siege로 부하발생 후 Grafana 그래프 확인
+
+![image](https://github.com/user-attachments/assets/02e06e7b-08cc-4e83-bcbd-662681a5a382)
